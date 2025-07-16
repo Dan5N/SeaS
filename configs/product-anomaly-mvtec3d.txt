@@ -1,0 +1,76 @@
+bagel+combined
+bagel+contamination
+bagel+crack
+bagel+hole
+cable_gland+bent
+cable_gland+cut
+cable_gland+hole
+cable_gland+thread
+carrot+combined
+carrot+contamination
+carrot+crack
+carrot+cut
+carrot+hole
+cookie+combined
+cookie+contamination
+cookie+crack
+cookie+hole
+dowel+bent
+dowel+combined
+dowel+contamination
+dowel+cut
+foam+color
+foam+combined
+foam+contamination
+foam+cut
+peach+combined
+peach+contamination
+peach+cut
+peach+hole
+potato+combined
+potato+contamination
+potato+cut
+potato+hole
+rope+contamination
+rope+cut
+rope+open
+tire+combined
+tire+contamination
+tire+cut
+tire+hole
+
+
+我想改一下这一段代码，实际上最初的目录结构是：
+tire/
+└── test/
+    └── some_case/
+        └── rgb/
+            ├── a.png
+            └── b.png
+	└── gt/
+	    ├── a.png
+            └── b.png
+└──train/
+    └── good/
+	 └── rgb/
+	    ├── a.png
+            └── b.png
+我想要换成
+tire/
+└── test/
+    └── some_case/
+	├── a.png
+        └── b.png
+└── ground_truth/
+    └── some_case/
+	├── a.png
+        └── b.png
+└── train/
+    └── good/
+	├── a.png
+        └── b.png
+其中，test下的文件来自于原本test下的对应some_case的rgb，ground_truth下的文件来自于原本对应some_case的gt，train/good下的文件来自于原本train/good/rgb
+
+
+
+
