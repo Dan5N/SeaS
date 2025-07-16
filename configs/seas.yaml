@@ -1,0 +1,49 @@
+training:
+  datasets:
+    resolution: 512
+    num_normal_images: 60
+    rotation: True
+    dataloader_num_workers: 0
+    batch_size: 
+      gen_train_batch_size: 2
+      mask_train_batch_size: 2
+  models:
+    pretrained_model_name_or_path: ./model_hub/stable-diffusion-v1-4
+    prompt:
+      normal_token_num: 1
+      anomaly_token_num: 4
+      initializer_token: "defect"
+  optimizer:
+    gen_learning_rate: 0.000004
+    rmp_learning_rate: 0.0005
+    encoder_learning_rate: 0.00004
+    lr_scheduler: constant
+    lr_warmup_steps: 0
+    gradient_accumulation_steps: 2
+    adam_beta1: 0.9
+    adam_beta2: 0.999
+    adam_weight_decay: 0.01
+    adam_epsilon1e-08: 1e-08
+    lr_num_cycles: 1
+    lr_power: 1.0
+    use_8bit_adam: True
+  train_text_encoder: True
+  with_Ni_Alignment: True
+  mixed_precision: "no"
+  offset_noise: False
+
+inference:
+  datasets:
+    batch_size: 10
+    add_noise_step: 1500
+  models:
+    stable_diffusion_model_path: ./model_hub/stable-diffusion-v1-4
+    num_inference_steps: 25
+    guidance_scale: 8
+  seed_start: 0
+  threshold: 0.2
+  onlyfinal: True
+  gen_mask: True
+  device: "cuda:0"
+
+
