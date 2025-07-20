@@ -77,7 +77,7 @@ conda activate seas
 Install the required packages:
 
 ```
-pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.0.0
+pip install torch==2.2.1 torchvision==0.17.1
 pip install -r requirements.txt
 ```
 
