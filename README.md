@@ -14,6 +14,7 @@ Institutions: <sup>1</sup>Huazhong University of Science and Technology | <sup>2
 
 ## 📣Updates:
 ***07/20/2025***
+
 We have updated the environment configuration file to address some known issues. Please update your local "requirements.txt" file accordingly.
 
 ***07/16/2025***
