@@ -71,15 +71,15 @@ def reorganize_structure_copy(root_dir, target_dir):
                          os.path.join(dst_train, fname))
 
 if __name__ == "__main__":
-    products = ["bagel"
-                "cable_gland"
-                "carrot"
-                "cookie"
-                "dowel"
-                "foam"
-                "peach"
-                "potato"
-                "rope"
+    products = ["bagel",
+                "cable_gland",
+                "carrot",
+                "cookie",
+                "dowel",
+                "foam",
+                "peach",
+                "potato",
+                "rope",
                 "tire"]
     for product in products:
         src_root = f"data/mvtec_3d_anomaly_detection/{product}"
