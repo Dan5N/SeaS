@@ -34,15 +34,15 @@ def create_infer_sh():
 
 if __name__ == "__main__":
     # MVTec
-    anomalylist_path = './configs/product-anomly-mvtec.txt'
+    anomalylist_path = './configs/product-anomaly-mvtec.txt'
     produts = ['bottle', 'cable', 'capsule', 'carpet', 'grid', 'hazelnut', 'leather', 'metal_nut', 'pill', 'screw', 'tile', 'toothbrush', 'transistor', 'wood', 'zipper']
     
     # # MVTec 3D
-    # anomalylist_path = './configs/product-anomly-mvtec3d.txt'
+    # anomalylist_path = './configs/product-anomaly-mvtec3d.txt'
     # products = ['bagel', 'cable_gland', 'carrot', 'cookie', 'dowel', 'foam', 'peach', 'potato', 'rope', 'tire']
 
     # # VisA
-    # anomalylist_path = './configs/product-anomly-visa.txt'
+    # anomalylist_path = './configs/product-anomaly-visa.txt'
     # products = ['candle', 'capsules', 'cashew', 'chewinggum', 'fryum', 'macaroni1', 'macaroni2', 'pcb1', 'pcb2', 'pcb3', 'pcb4', 'pipe_fryum']
 
     reference_infer_sh = './scripts/infer.sh' # template infer.sh.

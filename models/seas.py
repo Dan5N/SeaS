@@ -469,7 +469,7 @@ class SeaS():
                         # We apply this to prevent all zero mask because of the values of tiny anomaly region in VisA and MVTec-3D-AD
                         # in mask which should be 1 but are affected by the interpolation.
                         if "visa" in str(self.instance_data_dir) or "3d" in str(self.instance_data_dir):
-                            ground_truth_mask = ground_truth>1
+                            ground_truth_mask = ground_truth > 0
                         cross_map_final[attn_resolution] = cross_map_final[attn_resolution].squeeze(-1).to(model_input.device)
                         normal_cross_map, anomaly_cross_map = self.normalize_attention_maps(cross_map_final, attn_resolution, normal_token_num, anomaly_token_num)
                         # Cross attention map
