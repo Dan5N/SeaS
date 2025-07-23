@@ -13,6 +13,10 @@ Institutions: <sup>1</sup>Huazhong University of Science and Technology | <sup>2
 
 
 ## 📣Updates:
+***07/23/2025***
+
+We have updated some of the code to better adapt to the VisA and MVTec 3D AD datasets. Please update your local files accordingly.
+
 ***07/20/2025***
 
 We have updated the environment configuration file to address some known issues. Please update your local "requirements.txt" file accordingly.
@@ -62,7 +66,7 @@ We introduce SeaS, a unified industrial generative model for automatically creat
 
 - Python 3.9
 - CUDA 11.8
-- PyTorch 2.1.2
+- PyTorch 2.2.1
 
 Clone the repository locally:
 
@@ -84,7 +88,7 @@ pip install torch==2.2.1 torchvision==0.17.1
 pip install -r requirements.txt
 ```
 
-And initialize an [Accelerate](https://github.com/huggingface/accelerate/) environment with:
+Initialize an [Accelerate](https://github.com/huggingface/accelerate/) environment with:
 
 ```
 accelerate config
@@ -290,6 +294,7 @@ In `scripts/infer.sh` we provide the `broken_large` anomaly of product `bottle` 
 ```
 python utils/generate_infer_sh.py
 ```
+Please change the value of guidance scale in 'configs/seas.yaml' for VisA and MVTec 3D AD datasets respectively.
 
 <span id='IC-LPIPS and IS'/>
 

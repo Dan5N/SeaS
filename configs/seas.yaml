@@ -39,7 +39,7 @@ inference:
   models:
     stable_diffusion_model_path: ./model_hub/stable-diffusion-v1-4
     num_inference_steps: 25
-    guidance_scale: 8
+    guidance_scale: 8 # 2 for VisA, and 5 for MVTec 3D AD
   seed_start: 0
   threshold: 0.2
   onlyfinal: True

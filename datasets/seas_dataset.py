@@ -186,7 +186,7 @@ class SeaSTrainDataset(Dataset):
         image_path = os.path.join(self.instance_data_root,defect_name,image_file_name)
         instance_image = Image.open(image_path)
         mask_file_name = f"{index_defect:03}_mask.png"
-        if "visa" in str(self.instance_data_root):
+        if "visa" in str(self.instance_data_root) or "3d" in str(self.instance_data_root):
             mask_file_name = f"{index_defect:03}.png"
         mask_path = os.path.join(self.mask_root,defect_name,mask_file_name)
         mask = Image.open(mask_path)

@@ -4,11 +4,10 @@ export CUDA_VISIBLE_DEVICES=0
 export ACCELERATE_FORCE_NUM_PROCESSES=1
 
 declare -A subclasses_nums=(
-  [bottle]=3     
-  # [cable]=8      [capsule]=5   [carpet]=5
-  # [grid]=5       [hazelnut]=4   [leather]=5   [metal_nut]=4
-  # [pill]=7       [screw]=5      [tile]=5      [toothbrush]=1
-  # [transistor]=4 [wood]=5       [zipper]=7
+  [bottle]=3     [cable]=8      [capsule]=5   [carpet]=5
+  [grid]=5       [hazelnut]=4   [leather]=5   [metal_nut]=4
+  [pill]=7       [screw]=5      [tile]=5      [toothbrush]=1
+  [transistor]=4 [wood]=5       [zipper]=7
 )
 
 for category in $(printf "%s\n" "${!subclasses_nums[@]}" | sort); do
@@ -48,9 +47,9 @@ done
 # for category in $(printf "%s\n" "${!subclasses_nums[@]}" | sort); do
 #   echo "==== Processing mask for $category ===="
 #   export SeaS_MODEL_NAME="outputs/checkpoints/${category}/generation-checkpoint"
-#   export INSTANCE_DIR="data/mvtec_3d_anomaly_detection/${category}/test"
-#   export MASK_DIR="data/mvtec_3d_anomaly_detection/${category}/ground_truth"
-#   export NORMAL_DIR="data/mvtec_3d_anomaly_detection/${category}/train/good/"
+#   export INSTANCE_DIR="data/mvtec_3d_anomaly_detection_reorg/${category}/test"
+#   export MASK_DIR="data/mvtec_3d_anomaly_detection_reorg/${category}/ground_truth"
+#   export NORMAL_DIR="data/mvtec_3d_anomaly_detection_reorg/${category}/train/good/"
 #   export OUTPUT_DIR="outputs/checkpoints/${category}"
   
 #   mask_steps=$(( subclasses_nums[$category] * 800 ))

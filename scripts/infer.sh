@@ -1,5 +1,5 @@
 python examples/SeaS_infer.py \
-    --output_dir=outputs/images/bottle/broken_large  \
+    --output_dir=outputs/images/mvtec_anomaly_detection/bottle/broken_large  \
     --ref_data_dir=data/mvtec_anomaly_detection/bottle/train/good/ \
     --gen_model_path=outputs/checkpoints/bottle/generation-checkpoint \
     --rmp_model_path=outputs/checkpoints/bottle/mask-checkpoint/rmp  \
