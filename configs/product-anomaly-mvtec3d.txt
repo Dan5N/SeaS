@@ -40,37 +40,5 @@ tire+cut
 tire+hole
 
 
-我想改一下这一段代码，实际上最初的目录结构是：
-tire/
-└── test/
-    └── some_case/
-        └── rgb/
-            ├── a.png
-            └── b.png
-	└── gt/
-	    ├── a.png
-            └── b.png
-└──train/
-    └── good/
-	 └── rgb/
-	    ├── a.png
-            └── b.png
-我想要换成
-tire/
-└── test/
-    └── some_case/
-	├── a.png
-        └── b.png
-└── ground_truth/
-    └── some_case/
-	├── a.png
-        └── b.png
-└── train/
-    └── good/
-	├── a.png
-        └── b.png
-其中，test下的文件来自于原本test下的对应some_case的rgb，ground_truth下的文件来自于原本对应some_case的gt，train/good下的文件来自于原本train/good/rgb
-
-
 
 

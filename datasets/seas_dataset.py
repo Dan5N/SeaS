@@ -103,7 +103,7 @@ class SeaSTrainDataset(Dataset):
         for subfolder in sorted(Path(instance_data_root).iterdir()):
             if subfolder.is_dir() and subfolder.name != "good":
                 num_images = len(list(subfolder.iterdir()))
-                self.num_instance_images_list[subfolder.name] = int(num_images/3)
+                self.num_instance_images_list[subfolder.name] = max(int(num_images/3),1)
         self.total_num_images = sum(self.num_instance_images_list.values())
 
         # cumulative_lengths is used to store the cumulative length of images of different anomlay types.
@@ -186,7 +186,7 @@ class SeaSTrainDataset(Dataset):
         image_path = os.path.join(self.instance_data_root,defect_name,image_file_name)
         instance_image = Image.open(image_path)
         mask_file_name = f"{index_defect:03}_mask.png"
-        if "visa" in str(self.instance_data_root):
+        if "visa" in str(self.instance_data_root) or "3d" in str(self.instance_data_root):
             mask_file_name = f"{index_defect:03}.png"
         mask_path = os.path.join(self.mask_root,defect_name,mask_file_name)
         mask = Image.open(mask_path)
