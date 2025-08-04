@@ -13,6 +13,11 @@ Institutions: <sup>1</sup>Huazhong University of Science and Technology | <sup>2
 
 
 ## 📣Updates:
+
+***08/04/2025***
+
+The generated [normal images](https://huggingface.co/datasets/HUST-SLOW/SeaS/tree/main/Generated_Normal_Images) of SeaS is released.
+
 ***07/23/2025***
 
 We have updated some of the code to better adapt to the VisA and MVTec 3D AD datasets. Please update your local files accordingly.
@@ -42,13 +47,14 @@ We have updated the environment configuration file to address some known issues.
   * <a href='#sh_infer'>Inference</a>
   * <a href='#IC-LPIPS and IS'>IC-LPIPS and IS Metric</a>
 * <a href='#downstream'>5. Downstream Segmentation Tasks</a>
-* <a href='#results_image_generation'>6. Results of anomaly image generation</a>
-* <a href='#results_combining_sysad'>7. Results of combining generated anomalies with synthesis-based anomaly detection methods</a>
-* <a href='#results_combining_unad'>8. Results of combining generated normal images with unsupervised anomaly detection methods</a>
-* <a href='#results_seg'>9. Results of training supervised segmentation models for anomaly detection and segmentation</a>
-* <a href='#citation'>10. Citation</a>
-* <a href='#acknowledgement'>11. Acknowledgement</a>
-* <a href='#license'>12. License</a>
+* <a href='#downstream_ad'>6. Downstream Anomaly Detection Tasks</a>
+* <a href='#results_image_generation'>7. Results of anomaly image generation</a>
+* <a href='#results_combining_sysad'>8. Results of combining generated anomalies with synthesis-based anomaly detection methods</a>
+* <a href='#results_combining_unad'>9. Results of combining generated normal images with unsupervised anomaly detection methods</a>
+* <a href='#results_seg'>10. Results of training supervised segmentation models for anomaly detection and segmentation</a>
+* <a href='#citation'>11. Citation</a>
+* <a href='#acknowledgement'>12. Acknowledgement</a>
+* <a href='#license'>13. License</a>
 
 <span id='abstract'/>
 
@@ -327,6 +333,12 @@ For comparison with other methods, we resize all images to 256x256 before calcul
 ## 🧐Downstream Segmentation Tasks: <a href='#all_catalogue'>[Back to Catalogue]</a>
 
 In the downstream segmentation tasks, we use BiSeNet V2, UperNet and LFD. For BiSeNet V2 and UperNet, we use the official implementation in [MMSegmentation](https://github.com/open-mmlab/mmsegmentation). For LFD, we use the official implementation, which can be found in [LFD](https://github.com/HUST-SLOW/LFD). Considering both model size and performance, we recommend to use LFD.
+
+<span id='downstream_ad'/>
+
+## 🧐Downstream Anomaly Detection Tasks: <a href='#all_catalogue'>[Back to Catalogue]</a>
+
+In the downstream unsupervised Anomaly Detection tasks, we combine SeaS-generated normal images with [HVQ-Trans](https://github.com/RuiyingLu/HVQ-Trans), [PatchCore](https://github.com/amazon-science/patchcore-inspection) and [MambaAD](https://github.com/lewandofskee/MambaAD).
 
 <span id='results_image_generation'/>
 
