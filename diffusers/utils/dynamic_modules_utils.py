@@ -282,15 +282,14 @@ def get_cached_module_file(
         # community pipeline on GitHub
         github_url = COMMUNITY_PIPELINES_URL.format(revision=revision, pipeline=pretrained_model_name_or_path)
         try:
-            resolved_module_file = cached_download(
-                github_url,
-                cache_dir=cache_dir,
-                force_download=force_download,
-                proxies=proxies,
-                resume_download=resume_download,
-                local_files_only=local_files_only,
-                use_auth_token=False,
-            )
+            # Using urllib.request.urlretrieve as fallback for GitHub URLs since cached_download is deprecated
+            import tempfile
+            import urllib.request
+            temp_dir = tempfile.mkdtemp()
+            filename = os.path.basename(github_url)
+            temp_file = os.path.join(temp_dir, filename)
+            urllib.request.urlretrieve(github_url, temp_file)
+            resolved_module_file = temp_file
             submodule = "git"
             module_file = pretrained_model_name_or_path + ".py"
         except EnvironmentError:
